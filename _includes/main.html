@@ -1,0 +1,88 @@
+{% assign Skills = site.data.Skills.Skillset %}
+
+
+<div class="container LogosContainer">
+  {% for item in Skills %}
+
+     <img class="logoSkills" src="../{{ item.logoPath }}" onclick="smoothScroll(document.getElementById('{{ item.anchor }}'))">
+
+  {% endfor %}
+</div>
+<div class="introduction">
+  <div class="introductionTitle"><h1> Jas Parkety </h1></div>
+  <div class="introductionText">{{ site.data.Introduction.Bio }}</div>
+
+  <a href="https://github.com/JasParkety/" target="_blank"><img class="introductionImages" src="../assets/images/logos/github.png"></a>
+  <a href="https://codepen.io/JasParkety" target="_blank"><img class="introductionImages" src="../assets/images/logos/codepen.png"></a>
+  <a href="https://stackoverflow.com/users/8557886/jasparkety" target="_blank"><img class="introductionImages" src="../assets/images/logos/stackoverflow.png"></a>
+
+
+</div>
+
+  {% for item in Skills %}
+    {% assign modCategories = forloop.index | modulo: 2 %}
+
+
+
+        <div class="mainElementSection-{{ modCategories }}" id="{{item.anchor}}">
+          <h2>{{ item.title }}</h2>
+      </div>
+
+
+
+    {% for Skill in item.Skill %}
+        {% assign mod = forloop.index | modulo: 2 %}
+
+
+
+            <div class="elementsContainer-{{ modCategories }}">
+
+
+{% if modCategories == 1 %}
+
+    <div class="elementsFlexContainer-{{ modCategories }}">
+
+        <div class="wrapperCol-{{ modCategories }}">
+              <h2>{{ Skill.title }}</h2>
+                  <div class="SkillDescription">
+                      {{ Skill.description }}
+                  </div>
+        </div>
+        <div class="screenshotFlexContainer-{{ modCategories }}">
+              <img class="screenshots" onclick=triggerModal("../{{ Skill.screenshot }}") src="../{{ Skill.screenshot }}" style="width:100%;max-width:300px">
+        </div>
+
+    </div>
+
+{% else %}
+
+<div class="elementsFlexContainer-{{ modCategories }}">
+
+    <div class="screenshotFlexContainer-{{ modCategories }}">
+          <img class="screenshots" onclick=triggerModal("../{{ Skill.screenshot }}") src="../{{ Skill.screenshot }}" style="width:100%;max-width:300px">
+    </div>
+
+    <div class="wrapperCol-{{ modCategories }}">
+          <h2>{{ Skill.title }}</h2>
+              <div class="SkillDescription">
+                  {{ Skill.description }}
+              </div>
+    </div>
+
+</div>
+
+{% endif %}
+
+
+        </div>
+        {% endfor %}
+
+
+
+  {% endfor %}
+
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>

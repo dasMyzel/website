@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html id="no-fouc" lang="en" class="no-js">
+
+<!--  Setting Parameter -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/navigation.css">
+<link rel="stylesheet" href="/css/navigationBurgerbutton.css">
+<link rel="stylesheet" href="/css/preLoader.css">
+
+<link rel="shortcut icon" type="image/x-icon" href="/assets/favicons/favicon.ico">
+
+
+  <header>
+
+    
+
+
+<div class="container StickyNav">
+     <div class="container LogosContainer">
+
+       
+
+          <img class="logoSkills" src="../assets/images/logos/bashGreen.png" onclick="smoothScroll(document.getElementById('Bash'))">
+
+       
+
+          <img class="logoSkills" src="../assets/images/logos/jQuery.png" onclick="smoothScroll(document.getElementById('jQuery'))">
+
+       
+
+          <img class="logoSkills" src="../assets/images/logos/python.png" onclick="smoothScroll(document.getElementById('Python'))">
+
+       
+
+          <img class="logoSkills" src="../assets/images/logos/jekyll.png" onclick="smoothScroll(document.getElementById('Jekyll'))">
+
+       
+
+          <img class="logoSkills" src="../assets/images/logos/git.png" onclick="smoothScroll(document.getElementById('Git'))">
+
+       
+
+          <img class="logoSkills" src="../assets/images/logos/sass.png" onclick="smoothScroll(document.getElementById('CSS'))">
+
+       
+
+</div>
+</div>
+
+<div class="MobileTopNavigation">
+
+      <div id="initiate" class="item item-transition item-b color-button myRipple">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+      </div>
+
+    <div class="JasParketyMobile">JasParkety</div>
+
+    <div id="secondDisplay" class="slider hide">
+      <div class="mobileLogoContainerFlex">
+        
+          <div class="logoSkillsContainer">
+           <img class="logoSkills" src="../assets/images/logos/bashGreen.png" onclick="smoothScroll(document.getElementById('Bash'))">
+          </div>
+        
+          <div class="logoSkillsContainer">
+           <img class="logoSkills" src="../assets/images/logos/jQuery.png" onclick="smoothScroll(document.getElementById('jQuery'))">
+          </div>
+        
+          <div class="logoSkillsContainer">
+           <img class="logoSkills" src="../assets/images/logos/python.png" onclick="smoothScroll(document.getElementById('Python'))">
+          </div>
+        
+          <div class="logoSkillsContainer">
+           <img class="logoSkills" src="../assets/images/logos/jekyll.png" onclick="smoothScroll(document.getElementById('Jekyll'))">
+          </div>
+        
+          <div class="logoSkillsContainer">
+           <img class="logoSkills" src="../assets/images/logos/git.png" onclick="smoothScroll(document.getElementById('Git'))">
+          </div>
+        
+          <div class="logoSkillsContainer">
+           <img class="logoSkills" src="../assets/images/logos/sass.png" onclick="smoothScroll(document.getElementById('CSS'))">
+          </div>
+        
+      </div>
+    </div>
+
+    <div id="display" class="slider hide">
+      <div class="FrontEndMobile">
+        <span>Front</span>
+        <span>End</span>
+        <span>Development</span>
+      </div>
+    </div>
+
+</div>
+
+  </header>
+
+<body>
+
+    <!-- <div id="loader-wrapper">
+    <div id="loader"></div>
+
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+
+</div>
+
+<div id="content">
+    <h2>This is our page title</h2>
+    <p>Lorem ipsum dolor sit amet.</p>
+</div> -->
+
+
+    <!--  Lets get the nice transition for the Background -->
+    <div class="firstGradient">
+    </div>
+    <div class="secondGradient">
+    </div>
+
+    <!-- Main Section for the layout's holder -->
+    <main>
+
+        <div class="container-fluid mainContentContainerFluid">
+  <div class="container controlResponsive">
+
+    
+
+
+<div class="container LogosContainer">
+  
+
+     <img class="logoSkills" src="../assets/images/logos/bashGreen.png" onclick="smoothScroll(document.getElementById('Bash'))">
+
+  
+
+     <img class="logoSkills" src="../assets/images/logos/jQuery.png" onclick="smoothScroll(document.getElementById('jQuery'))">
+
+  
+
+     <img class="logoSkills" src="../assets/images/logos/python.png" onclick="smoothScroll(document.getElementById('Python'))">
+
+  
+
+     <img class="logoSkills" src="../assets/images/logos/jekyll.png" onclick="smoothScroll(document.getElementById('Jekyll'))">
+
+  
+
+     <img class="logoSkills" src="../assets/images/logos/git.png" onclick="smoothScroll(document.getElementById('Git'))">
+
+  
+
+     <img class="logoSkills" src="../assets/images/logos/sass.png" onclick="smoothScroll(document.getElementById('CSS'))">
+
+  
+</div>
+<div class="introduction">
+  <div class="introductionTitle"><h1> Jas Parkety </h1></div>
+  <div class="introductionText">My name is Lukas H. and I am a Front End Developer living and working in Vienna.
+<br>
+You are welcome to take a glimps at my skillset or visit one of my profiles:
+</div>
+
+  <a href="https://github.com/JasParkety/" target="_blank"><img class="introductionImages" src="../assets/images/logos/github.png"></a>
+  <a href="https://codepen.io/JasParkety" target="_blank"><img class="introductionImages" src="../assets/images/logos/codepen.png"></a>
+  <a href="https://stackoverflow.com/users/8557886/jasparkety" target="_blank"><img class="introductionImages" src="../assets/images/logos/stackoverflow.png"></a>
+
+
+</div>
+
+  
+    
+
+
+
+        <div class="mainElementSection-1" id="Bash">
+          <h2>Bash</h2>
+      </div>
+
+
+
+    
+        
+
+
+
+            <div class="elementsContainer-1">
+
+
+
+
+    <div class="elementsFlexContainer-1">
+
+        <div class="wrapperCol-1">
+              <h2>Dead Link Checker</h2>
+                  <div class="SkillDescription">
+                      There are a lot of tools to find dead links, but knowing grep, find etc. can customize a first level test on local machines.
+                  </div>
+        </div>
+        <div class="screenshotFlexContainer-1">
+              <img class="screenshots" onclick=triggerModal("../assets/images/linkChecker.png") src="../assets/images/linkChecker.png" style="width:100%;max-width:300px">
+        </div>
+
+    </div>
+
+
+
+
+        </div>
+        
+        
+
+
+
+            <div class="elementsContainer-1">
+
+
+
+
+    <div class="elementsFlexContainer-1">
+
+        <div class="wrapperCol-1">
+              <h2>Advanced Search</h2>
+                  <div class="SkillDescription">
+                      Another example of basic bash usage.
+                  </div>
+        </div>
+        <div class="screenshotFlexContainer-1">
+              <img class="screenshots" onclick=triggerModal("../assets/images/search.png") src="../assets/images/search.png" style="width:100%;max-width:300px">
+        </div>
+
+    </div>
+
+
+
+
+        </div>
+        
+
+
+
+  
+    
+
+
+
+        <div class="mainElementSection-0" id="jQuery">
+          <h2>Examples of few JS/jQuery Code Snippets</h2>
+      </div>
+
+
+
+    
+        
+
+
+
+            <div class="elementsContainer-0">
+
+
+
+
+<div class="elementsFlexContainer-0">
+
+    <div class="screenshotFlexContainer-0">
+          <img class="screenshots" onclick=triggerModal("../assets/images/tosrus.png") src="../assets/images/tosrus.png" style="width:100%;max-width:300px">
+    </div>
+
+    <div class="wrapperCol-0">
+          <h2>Get a nice tosrus API for embedded youtube</h2>
+              <div class="SkillDescription">
+                  The main task here was to provide a nice wrapper with a z-index that overlaid the whole page except the navigation. As well some recommandations by youtube were switched off and after the video was finished a nice opacity transition took place.
+              </div>
+    </div>
+
+</div>
+
+
+
+
+        </div>
+        
+
+
+
+  
+    
+
+
+
+        <div class="mainElementSection-1" id="Python">
+          <h2>Python Test Driven Development & Tool Snippets</h2>
+      </div>
+
+
+
+    
+        
+
+
+
+            <div class="elementsContainer-1">
+
+
+
+
+    <div class="elementsFlexContainer-1">
+
+        <div class="wrapperCol-1">
+              <h2>Fileserver HTML tag handler</h2>
+                  <div class="SkillDescription">
+                      In some cases a team wants to deploy different kind of documentation. The Work Flow should stay the same. Using mutliple tools to visualize text documents may need some coding to be able to use the full power of several tools.
+                  </div>
+        </div>
+        <div class="screenshotFlexContainer-1">
+              <img class="screenshots" onclick=triggerModal("../assets/images/htmlParser.png") src="../assets/images/htmlParser.png" style="width:100%;max-width:300px">
+        </div>
+
+    </div>
+
+
+
+
+        </div>
+        
+        
+
+
+
+            <div class="elementsContainer-1">
+
+
+
+
+    <div class="elementsFlexContainer-1">
+
+        <div class="wrapperCol-1">
+              <h2>Youtrack API Communiation</h2>
+                  <div class="SkillDescription">
+                      The following Code Snippet was used to read the latest Release Version and to implement it on a webpage. It was also a preparation for a version controlled documentation.
+                  </div>
+        </div>
+        <div class="screenshotFlexContainer-1">
+              <img class="screenshots" onclick=triggerModal("../assets/images/youtrack.png") src="../assets/images/youtrack.png" style="width:100%;max-width:300px">
+        </div>
+
+    </div>
+
+
+
+
+        </div>
+        
+
+
+
+  
+    
+
+
+
+        <div class="mainElementSection-0" id="Jekyll">
+          <h2>Jekyll Liquid Language</h2>
+      </div>
+
+
+
+    
+        
+
+
+
+            <div class="elementsContainer-0">
+
+
+
+
+<div class="elementsFlexContainer-0">
+
+    <div class="screenshotFlexContainer-0">
+          <img class="screenshots" onclick=triggerModal("../assets/images/newsroomJekyll.png") src="../assets/images/newsroomJekyll.png" style="width:100%;max-width:300px">
+    </div>
+
+    <div class="wrapperCol-0">
+          <h2>Generating a 3 column automated responsive and alligned Newspaper Front End</h2>
+              <div class="SkillDescription">
+                  In Jekyll there are several ways to align an element in a parent's column. In this particular example the goal was to insert an element in the first column if its modulo was 0, second if its modulo was 1 and third if its modulo was 2.
+              </div>
+    </div>
+
+</div>
+
+
+
+
+        </div>
+        
+
+
+
+  
+    
+
+
+
+        <div class="mainElementSection-1" id="Git">
+          <h2>Git of your feet</h2>
+      </div>
+
+
+
+    
+        
+
+
+
+            <div class="elementsContainer-1">
+
+
+
+
+    <div class="elementsFlexContainer-1">
+
+        <div class="wrapperCol-1">
+              <h2>Resolve Mergeconflict the best way</h2>
+                  <div class="SkillDescription">
+                      A good way to solve quick&dirty merge conflicts with git is via the command rebase. Unfortunately, this will overwrite the history. This is not how git is supposed to be used. The Screenshot shows a more consistent way by overwriting the branch and therefor not erasing the history.
+                  </div>
+        </div>
+        <div class="screenshotFlexContainer-1">
+              <img class="screenshots" onclick=triggerModal("../assets/images/git.png") src="../assets/images/git.png" style="width:100%;max-width:300px">
+        </div>
+
+    </div>
+
+
+
+
+        </div>
+        
+
+
+
+  
+    
+
+
+
+        <div class="mainElementSection-0" id="CSS">
+          <h2>CSS/SCSS</h2>
+      </div>
+
+
+
+    
+        
+
+
+
+            <div class="elementsContainer-0">
+
+
+
+
+<div class="elementsFlexContainer-0">
+
+    <div class="screenshotFlexContainer-0">
+          <img class="screenshots" onclick=triggerModal("../assets/images/scss.png") src="../assets/images/scss.png" style="width:100%;max-width:300px">
+    </div>
+
+    <div class="wrapperCol-0">
+          <h2>Responsive mixin functions & Loopig in SCSS</h2>
+              <div class="SkillDescription">
+                  Just a nice example how I like to use scss to create dynamic layouts.
+              </div>
+    </div>
+
+</div>
+
+
+
+
+        </div>
+        
+        
+
+
+
+            <div class="elementsContainer-0">
+
+
+
+
+<div class="elementsFlexContainer-0">
+
+    <div class="screenshotFlexContainer-0">
+          <img class="screenshots" onclick=triggerModal("../assets/images/foc.png") src="../assets/images/foc.png" style="width:100%;max-width:300px">
+    </div>
+
+    <div class="wrapperCol-0">
+          <h2>Preventing FOC</h2>
+              <div class="SkillDescription">
+                  A very small code snippet which made a fast flash on the landing page to prevent FOC on index only.
+              </div>
+    </div>
+
+</div>
+
+
+
+
+        </div>
+        
+
+
+
+  
+
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
+
+
+  </div>
+</div>
+
+
+    </main>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/assets/js/modal.js"></script>
+<script src="/assets/js/navigation.js"></script>
+<script src="/assets/js/confetti.js"></script>
+
+  </body>
+
+  <footer>
+    
+  </footer>
+
+</html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html id="no-fouc" lang="en" class="no-js">
+
+<!--  Setting Parameter -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/navigation.css">
+<link rel="stylesheet" href="/css/navigationBurgerbutton.css">
+<link rel="stylesheet" href="/css/preLoader.css">
+
+<link rel="shortcut icon" type="image/x-icon" href="/assets/favicons/favicon.ico">
+
+
+  <header>
+
+    
+
+
+<div class="container StickyNav">
+     <div class="container LogosContainer">
+
+       
+
+          <img class="logoSkills" src="../assets/images/logos/bashGreen.png" onclick="smoothScroll(document.getElementById('Bash'))">
+
+       
+
+          <img class="logoSkills" src="../assets/images/logos/jQuery.png" onclick="smoothScroll(document.getElementById('jQuery'))">
+
+       
+
+          <img class="logoSkills" src="../assets/images/logos/python.png" onclick="smoothScroll(document.getElementById('Python'))">
+
+       
+
+          <img class="logoSkills" src="../assets/images/logos/jekyll.png" onclick="smoothScroll(document.getElementById('Jekyll'))">
+
+       
+
+          <img class="logoSkills" src="../assets/images/logos/git.png" onclick="smoothScroll(document.getElementById('Git'))">
+
+       
+
+          <img class="logoSkills" src="../assets/images/logos/sass.png" onclick="smoothScroll(document.getElementById('CSS'))">
+
+       
+
+</div>
+</div>
+
+<div class="MobileTopNavigation">
+
+      <div id="initiate" class="item item-transition item-b color-button myRipple">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+      </div>
+
+    <div class="JasParketyMobile">JasParkety</div>
+
+    <div id="secondDisplay" class="slider hide">
+      <div class="mobileLogoContainerFlex">
+        
+          <div class="logoSkillsContainer">
+           <img class="logoSkills" src="../assets/images/logos/bashGreen.png" onclick="smoothScroll(document.getElementById('Bash'))">
+          </div>
+        
+          <div class="logoSkillsContainer">
+           <img class="logoSkills" src="../assets/images/logos/jQuery.png" onclick="smoothScroll(document.getElementById('jQuery'))">
+          </div>
+        
+          <div class="logoSkillsContainer">
+           <img class="logoSkills" src="../assets/images/logos/python.png" onclick="smoothScroll(document.getElementById('Python'))">
+          </div>
+        
+          <div class="logoSkillsContainer">
+           <img class="logoSkills" src="../assets/images/logos/jekyll.png" onclick="smoothScroll(document.getElementById('Jekyll'))">
+          </div>
+        
+          <div class="logoSkillsContainer">
+           <img class="logoSkills" src="../assets/images/logos/git.png" onclick="smoothScroll(document.getElementById('Git'))">
+          </div>
+        
+          <div class="logoSkillsContainer">
+           <img class="logoSkills" src="../assets/images/logos/sass.png" onclick="smoothScroll(document.getElementById('CSS'))">
+          </div>
+        
+      </div>
+    </div>
+
+    <div id="display" class="slider hide">
+      <div class="FrontEndMobile">
+        <span>Front</span>
+        <span>End</span>
+        <span>Development</span>
+      </div>
+    </div>
+
+</div>
+
+  </header>
+
+<body>
+
+    <!-- <div id="loader-wrapper">
+    <div id="loader"></div>
+
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+
+</div>
+
+<div id="content">
+    <h2>This is our page title</h2>
+    <p>Lorem ipsum dolor sit amet.</p>
+</div> -->
+
+
+    <!--  Lets get the nice transition for the Background -->
+    <div class="firstGradient">
+    </div>
+    <div class="secondGradient">
+    </div>
+
+    <!-- Main Section for the layout's holder -->
+    <main>
+
+        
+<h2 id="search-for-a-specific-string-in-multiple-files-without-telling-the-file-extension">Search for a specific String in multiple files without telling the file extension</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">grep</span> <span class="nt">-rnw</span> <span class="s1">'qitasc.github.io/'</span> <span class="nt">-e</span> <span class="s1">'manual-bg'</span>
+</code></pre></div></div>
+
+<h2 id="search-for-specific-string-in-multiple-files-of-one-type-or-several-types">Search for specific String in multiple files of one type (or several types)</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find <span class="nb">.</span> <span class="nt">-regex</span> <span class="s2">".*</span><span class="se">\.</span><span class="s2">py"</span> | sed <span class="s1">'s/ /\\ /g'</span> | xargs <span class="nb">grep</span> <span class="nt">-i</span> <span class="s2">"parent"</span>
+</code></pre></div></div>
+
+<p>#!/bin/bash</p>
+
+<p>#############################################</p>
+<h1 id="checks-the-webpage-and-remove-temp-files">Checks the webpage and remove temp files</h1>
+<p>#############################################</p>
+
+<p>wget –spider -r –no-check-certificate -nv –output-file=’404.log’ https://docs.qitasc.com
+rm -rf docs.qitasc.com</p>
+
+<p>#############################################</p>
+<h1 id="gets-the-total-number-of-broken-links">Gets the total number of broken Links</h1>
+<p>#############################################</p>
+
+<p>numberOfLinks=$( grep ‘broken’ 404.log | sed ‘s/[^0-9]*//g’)
+displayNumber=$(($numberOfLinks + 1))</p>
+
+<p>#############################################</p>
+<h1 id="displays-total-number-of-broken-links">Displays total number of broken Links</h1>
+<p>#############################################
+grep -A $displayNumber ‘broken links’ 404.log</p>
+
+<p>for i in $(seq 1 $numberOfLinks);
+do
+      printf “\nFound a broken Link:\n”
+      j=$((i + 1))
+      # get the wanted lines to display out of the file 404.log, but removes first the 24 characters https://docs.qitasc.com
+      keyWord=$(grep ‘broken links’ 404.log -A$j | tail -n 1 | sed ‘s/^.{24}//’);
+      keyWord=”../${keyWord}”
+      printf “Broken Link ====&gt; $keyWord &lt;==== found in the following files: \n”
+      # Finds the keyword in the manual repository but excludes the files 404.log and the folder intact-handbook
+      find . -type f -print | sed ‘s/ /\ /g’ | xargs grep -i “$keyWord” | awk ‘(!/intact-handbook/) &amp;&amp; (!/404/)’ | grep -v ‘Binary file’
+      printf “\n”
+done
+~                                                                                                                                                                                                         <br />
+~                                                                                                                                                                                                         <br />
+echo Remove Files from the docs folder</p>
+<h1 id="this-step-deletes-files-listed-in-the-file-manualintact-handbookautomationconfigurationignoredfilestxt">This step deletes files listed in the file manual/intact-handbook/automation/configuration/ignoredFiles.txt</h1>
+<h1 id="the-files-may-be-needed-to-be-part-of-the-repository-but-should-not-be-served-by-mkdocs">The files may be needed to be part of the repository but should not be served by mkdocs</h1>
+<p>declare -a listOfFiles
+STR=”intact-handbook/docs/”
+mapfile -t listOfFiles &lt; intact-handbook/automation/configuration/ignoredFiles.txt</p>
+<h1 id="bash-resolves-this-eventually-to-a-command-strline-so-use-strline-instead">Bash resolves this eventually to a command $STR$line so use “${STR}$line” instead</h1>
+<h1 id="if-str-eg-is--and-line-is--it-deletes-the-whole-root">If STR e.g. is / and line is * it deletes the whole root</h1>
+<h1 id="also-take-care-of-backticks-bash-interpretates-all-strings-within-backticks-as-a-command">Also take care of <code class="highlighter-rouge">Backticks</code>, bash interpretates all strings within Backticks as a command</h1>
+<p>while IFS= read -r line; do rm -rf “${STR}$line”; done &lt; intact-handbook/automation/configuration/ignoredFiles.txt</p>
+
+<p>#!/usr/bin/env python3</p>
+
+<p>import fileinput, os, fnmatch, re, sys
+from unittest import TestCase</p>
+
+<p>listMatch = [‘/AppTest/’, ‘IntactClient’, ‘tutorials’, ‘client’, ‘/intact/’, ‘/appendix/’, ‘/builtins/’, ‘/configuration/’, ‘/installation/’, ‘/intactbasics/’, ‘/intactsteps/’, ‘/qlass/’, ‘/reports/’, ‘/verification/’, ‘/manual_content_common/’, ‘/rules/’, ‘/studio/’, ‘GettingStarted’, ‘/conqlude/’]
+folderMatch = [‘/features/’, ‘/basics/’, ‘/installer/’, ‘/testcaseexecution/’]</p>
+
+<p>class RuleSet:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Changes the index to README if html in line, /index.html to /README
+@staticmethod
+def index_rpl(line):
+
+    ptn_index = re.compile('(?&lt;=/)index.html')
+
+    if ".html" in line:
+        line = re.sub(ptn_index, 'README', line)
+    return line
+
+# Searching for Links [&lt;arbitrary Text&gt;](../&lt;path text&gt;.html) changes to [&lt;arbitrary Text&gt;](../../&lt;path text&gt;.html)
+@staticmethod
+def relative_rpl(line):
+
+    ptn_dblperiod = re.compile('(?&lt;=\]\()\.\./(?=\w+)')
+
+    if ".html" in line and "../" in line:
+        line = re.sub(ptn_dblperiod, '../../', line)
+    return line
+
+# Internal Links must not have an .html tag included
+@staticmethod
+def internal_html_rpl(line):
+
+    ptn_html = re.compile('(\.html)(?&lt;=\w)')
+
+    if ".html" and any(word in line for word in listMatch):
+        line = re.sub(ptn_html, '', line)
+    return line
+
+# Replace Studio Links
+@staticmethod
+def studio_rpl(line):
+
+    ptn_studio = re.compile('(?&lt;=\w\])\(..\/(?=\w+\/)')
+    ptn_html = re.compile('(\.html)(?&lt;=\w)')
+
+    if ".html" in line and any(word in line for word in folderMatch):
+        line = re.sub(ptn_studio, '(/studio/', line)
+        line = re.sub(ptn_html, '', line)
+    return line
+
+# Replace Intact_Tutorials to tutorials
+@staticmethod
+def tutorials_rpl(line):
+
+    ptn_tutorials = re.compile('(\/Intact_Tutorials)')
+    ptn_html = re.compile('(\.html)(?&lt;=\w)')
+
+    if ".html" in line and "../Intact_Tutorials/" in line:
+        line = re.sub(ptn_tutorials, '' , line)
+        line = re.sub(ptn_html, '', line)
+    return line
+
+# Remove Prepending Intact_manual character sequence on installation
+@staticmethod
+def installation_rpl(line):
+
+    ptn_installation = re.compile('\/Intact_manual\/installation\/installation')
+
+    if "/Intact_manual/installation/installation" in line:
+        line = re.sub(ptn_installation, '/installation/installation', line)
+    return line
+
+# Remove Prepending Intact_manual character sequence on qlass
+@staticmethod
+def qlass_rpl(line):
+
+    ptn_qlass = re.compile('(\/Intact_manual\/qlass\/introduction)')
+
+    if "/Intact_manual/qlass/introduction" in line:
+        line = re.sub(ptn_qlass, "/qlass/introduction", line)
+    return line
+</code></pre></div></div>
+
+<p>class findClass:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@staticmethod
+def findReplace(directory, filePattern):
+    for path, dirs, files in os.walk(os.path.abspath(directory)):
+        for filename in fnmatch.filter(files, filePattern):
+            filepath = os.path.join(path, filename)
+            for line in fileinput.input(filepath, inplace=True):
+                if line.strip():
+                    changed_line = RuleSet.index_rpl(line)
+                    changed_line = RuleSet.relative_rpl(changed_line)
+                    changed_line = RuleSet.internal_html_rpl(changed_line)
+                    changed_line = RuleSet.studio_rpl(changed_line)
+                    changed_line = RuleSet.tutorials_rpl(changed_line)
+                    changed_line = RuleSet.installation_rpl(changed_line)
+                    changed_line = RuleSet.qlass_rpl(changed_line)
+                    # We dont want new lines if line was empty or filled with whitespaces
+                    if len(line.strip()) == 0 :
+                        print(changed_line)
+                    else:
+                        sys.stdout.write(changed_line)
+                else:
+                    print(line, end='')
+
+            print("Successfully changed", filename)
+</code></pre></div></div>
+
+<p>if <strong>name</strong> == ‘<strong>main</strong>’:
+    findClass.findReplace(“docs”, “*.md”)</p>
+
+<p>class MyTest(TestCase):</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def test_index_rpl(self):
+    self.assertEqual(RuleSet.index_rpl("/index.html"), "/README")
+
+def test_relative_rpl(self):
+    self.assertEqual(RuleSet.relative_rpl("[Apptests](../intactsteps/apptests.html)"), "[Apptests](../../intactsteps/apptests.html)")
+
+def test_html_rpl(self):
+    for word in listMatch:
+        self.assertEqual(RuleSet.internal_html_rpl("[Apptests](../" + word + "/apptests.html)"), "[Apptests](../" + word + "/apptests)")
+
+def test_studio_rpl(self):
+    for word in folderMatch:
+        self.assertEqual(RuleSet.studio_rpl("[Apptests](.." + word + "apptests.html)"), "[Apptests](/studio" + word + "apptests)")
+
+def test_tutorials_rpl(self):
+    self.assertEqual(RuleSet.tutorials_rpl("[Apptests](../Intact_Tutorials/apptests.html)"), "[Apptests](../apptests)")
+
+def test_installation_rpl(self):
+    self.assertEqual(RuleSet.installation_rpl("[Apptests](../Intact_manual/installation/installation"), "[Apptests](../installation/installation")
+
+def test_qlass_rpl(self):
+    self.assertEqual(RuleSet.qlass_rpl("[Apptests](../Intact_manual/qlass/introduction)"), "[Apptests](../qlass/introduction)" )                                                                                                                                                                                                         ~                   
+</code></pre></div></div>
+
+<p>#!/usr/bin/env python3</p>
+
+<p>import fileinput, os, os.path, fnmatch, re
+import youtrack.connection</p>
+
+<p>allRelNumbersArray = []
+allLinesHeaderArray = []
+allLinesNavArray = []</p>
+
+<p>class YoutrackRelease(object):
+    @staticmethod
+    def getYTTickets(url=”https://youtrack.qvie.qitasc.com”):
+        url=”https://youtrack.qvie.qitasc.com”</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    if os.path.exists("../configuration/automation.md"):
+        print('File automation.md Detected \n')
+        with open("../configuration/automation.md", "r") as loginInf:
+            login = loginInf.readline().strip()
+            pw = loginInf.readline().strip()
+    else:
+        print('automation.md Missing \n')
+        login = "automation"
+        pw = os.environ.get('automation_pass')
+        print('Environment Variable Detected \n')
+
+    connection = youtrack.connection.Connection(url, login=login, password=pw)
+    issues = connection.get_all_issues("project: {REL NOTES} General Notes", 0, 999)
+    RelNotes = [i["summary"].replace("General Notes ", "").strip().replace(":", "") for i in issues if "General Notes " in i["summary"]]
+    i = 0
+    for version in RelNotes:
+        if "2018" or "2019" in version:
+            allRelNumbersArray.append(version)
+            i += 1
+    NumberofLines = i
+    allRelNumbersArray.sort()
+    print("Total Number of Lines:", i, "NumberofLines Var:", NumberofLines, "\n")
+    i = 0
+
+    with open("../configuration/RelNumbers.md", "w") as f:
+        while i != NumberofLines:
+            print("Line Number: ", i, "Version: ", allRelNumbersArray[i], "\n")
+            f.write(allRelNumbersArray[i])
+            i += 1
+    f.close()
+    j = 0
+    k = 0
+    with open("../html/partials/header.html", "r") as headerFile:
+        with open("../../material/partials/header.html", "w") as headerMkdocsFile:
+            for line in headerFile:
+                allLinesHeaderArray.append(line.replace('[versionPythonPlaceHolder]', allRelNumbersArray[NumberofLines - 1]))
+                j += 1
+            while k != j:
+                headerMkdocsFile.write(allLinesHeaderArray[k])
+                k += 1
+    j = 0
+    k = 0
+    with open("../html/partials/nav.html", "r") as navFile:
+        with open("../../material/partials/nav.html", "w") as navMkdocsFile:
+            for line in navFile:
+                allLinesNavArray.append(line.replace('[versionPythonPlaceHolder]', allRelNumbersArray[NumberofLines - 1]))
+                j += 1
+            while k != j:
+                navMkdocsFile.write(allLinesNavArray[k])
+                k += 1
+
+    print('Version Number Implementation with Success \n') if __name__ == '__main__':
+YoutrackRelease.getYTTickets() else:
+print ('Imported by Module')
+</code></pre></div></div>
+
+
+
+    </main>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/assets/js/modal.js"></script>
+<script src="/assets/js/navigation.js"></script>
+<script src="/assets/js/confetti.js"></script>
+
+  </body>
+
+  <footer>
+    
+  </footer>
+
+</html>
